@@ -6,16 +6,17 @@
 }
 
 .alice-carousel {
-    margin-bottom: 4rem;
-    width: 100%;
-} 
+	margin-bottom: 4rem;
+	width: 100%;
+}
 
-.alice-carousel__stage, li.alice-carousel__stage-item.__active.__target {
+.alice-carousel__stage,
+li.alice-carousel__stage-item.__active.__target {
 	width: 100% !important;
 }
 
 .featured-container img {
-    width: 100%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
@@ -119,10 +120,16 @@
 	line-height: 1.5;
 }
 
-
 @media only screen and (max-width: 768px) {
+	/* .alice-carousel {
+		margin-top: 10rem;
+	} */
 
-	.alice-carousel {
-	margin-top: 40rem;
-}
+	.featured-data h2 {
+		font-size: 1.5rem;
+	}
+
+	.featured-data p:nth-of-type(2) {
+		font-size: 0.85rem;
+	}
 }

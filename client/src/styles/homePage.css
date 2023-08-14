@@ -10,11 +10,29 @@
     padding-left: 1rem;
 }
 
+@media only screen and (max-width: 870px) {
+
+	.home, .page{
+		padding-left: 0;
+        margin-top: 4rem;
+	}
+	
+}
+
 @media only screen and (max-width: 768px) {
 
 	.home, .page{
 		padding-left: 0;
         margin-top: 4rem;
+	}
+	
+}
+
+@media only screen and (max-width: 470px) {
+
+	.home, .page{
+		padding-left: 0;
+        margin-top: 8rem;
 	}
 	
 }
