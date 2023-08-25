@@ -38,6 +38,11 @@ Please note that user data is stored in local storage for this version of the pr
 1. **Homepage:** Upon opening the project in your browser, you'll land on the homepage where you can view and browse through the latest recipes.
 2. **Login:** Click on the "Login" button to access your account - in this initial stage of the project development, you can log in with the following credentials to test the app:
 
+```
+Email: user@guest.com
+Password: 1234
+```
+
 3. **Posting a Recipe:** Once logged in, you can create and share your own recipes by filling out the recipe details.
 4. **Viewing Recipes:** Browse through recipes by clicking on their titles. You can view the full recipe details and can save them to your personalised recipe collection.
 
