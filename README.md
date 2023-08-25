@@ -1,7 +1,7 @@
 
 # Cooking Light
 
-A brief description of what this project does and who it's for
+A fullstack project to upload, share, and save recipes to the logged in user's own recipe book. Originally built with Contentful, but later modified to use my own RESTful API for user and recipe management.
 
 
 ## Getting started
@@ -45,11 +45,10 @@ Please note that user data is stored in local storage for this version of the pr
 
 ## Features
 
-- **User Registration**: Create an account to start sharing and saving your favourite recipes.
 - **Recipe Creation**: Share your culinary creations with the community by posting detailed recipes.
 - **Recipe Viewing**: Browse and view recipes from other users to get inspired in the kitchen.
 - **Responsive Design**: Enjoy a seamless experience across various devices and screen sizes.
-
+- **Like Functionality**: By liking the individual recipes, you can save them to your own recipe collection.
 
 
 ## Screenshots
