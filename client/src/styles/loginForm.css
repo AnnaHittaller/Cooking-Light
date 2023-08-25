@@ -38,3 +38,8 @@
 .login-form button:hover {
 	color: #008080;
 }
+
+.toast {
+	color: #008080;
+	padding: .75rem 0 1rem 0;
+}

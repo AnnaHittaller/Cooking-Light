@@ -1,5 +1,5 @@
 import "../styles/loginForm.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
@@ -7,17 +7,29 @@ import { AuthContext } from "../context/AuthContext";
 function LoginForm() {
 	const { login, isLoggedIn } = useContext(AuthContext);
 	const navigate = useNavigate();
+	const [toast, setToast] = useState(false);
 
 	const [userData, setUserData] = useState({
 		email: "",
 		password: "",
 	});
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		login(userData.email, userData.password);
-		navigate("/");
+		await login(userData.email, userData.password);
+		if (!isLoggedIn) {
+			setToast(true);
+			setTimeout(() => {
+				setToast(false);
+			}, 3000);
+		}
 	};
+
+	useEffect(() => {
+		if (isLoggedIn) {
+			navigate("/");
+		}
+	}, [isLoggedIn, navigate]);
 
 	return (
 		<form onSubmit={handleSubmit} className="login-form">
@@ -37,6 +49,7 @@ function LoginForm() {
 				placeholder="password"
 				onChange={(e) => setUserData({ ...userData, password: e.target.value })}
 			/>
+			{toast && <div className="toast">Email or password incorrect</div>}
 			<button type="submit">Log in</button>
 		</form>
 	);

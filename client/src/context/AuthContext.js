@@ -15,7 +15,7 @@ export default function AuthContextFunction({ children }) {
 	}, [authorized, setIsLoggedIn]);
 
 	const login = (email, password) => {
-		if (email === "user4@example.com" && password === "1234") {
+		if (email === "user@guest.com" && password === "1234") {
 			setIsLoggedIn(true);
 			setAuthorized(true);
 		}

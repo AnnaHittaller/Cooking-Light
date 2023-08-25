@@ -1,19 +1,27 @@
-
 import { useState } from "react";
 import MainLayout from "../../layout/MainLayout";
 import "../../styles/contactPage.css";
+import { useNavigate } from "react-router-dom";
 
 function ContactPage() {
+	const [contact, setContact] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
 
-    const [contact, setContact] = useState({
+	const navigate = useNavigate();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setContact({
 			name: "",
 			email: "",
 			message: "",
 		});
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+		alert("Thank you for your message!");
+		navigate("/");
+	};
 
 	return (
 		<MainLayout>
